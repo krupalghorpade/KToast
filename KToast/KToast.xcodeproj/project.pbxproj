@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		681833EC1875D7BE0064E154 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681833EB1875D7BE0064E154 /* Foundation.framework */; };
+		681833EE1875D7BE0064E154 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681833ED1875D7BE0064E154 /* CoreGraphics.framework */; };
+		681833F01875D7BE0064E154 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681833EF1875D7BE0064E154 /* UIKit.framework */; };
+		681833F61875D7BE0064E154 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 681833F41875D7BE0064E154 /* InfoPlist.strings */; };
+		681833F81875D7BE0064E154 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 681833F71875D7BE0064E154 /* main.m */; };
+		681833FE1875D7BE0064E154 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 681833FD1875D7BE0064E154 /* Images.xcassets */; };
+		681834051875D7BE0064E154 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681834041875D7BE0064E154 /* XCTest.framework */; };
+		681834061875D7BE0064E154 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681833EB1875D7BE0064E154 /* Foundation.framework */; };
+		681834071875D7BF0064E154 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 681833EF1875D7BE0064E154 /* UIKit.framework */; };
+		6818340F1875D7BF0064E154 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6818340D1875D7BF0064E154 /* InfoPlist.strings */; };
+		681834111875D7BF0064E154 /* KToastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 681834101875D7BF0064E154 /* KToastTests.m */; };
+		6818341E1875DD280064E154 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6818341D1875DD280064E154 /* QuartzCore.framework */; };
+		681834311875F60E0064E154 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6818342A1875F60E0064E154 /* AppDelegate.m */; };
+		681834321875F60E0064E154 /* KToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6818342D1875F60E0064E154 /* KToast.m */; };
+		681834331875F60E0064E154 /* ParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681834301875F60E0064E154 /* ParentViewController.m */; };
+		681834371875F6260064E154 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 681834361875F6260064E154 /* Default.png */; };
+		84E767A418767C53000D4664 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E767A218767C53000D4664 /* Default-568h@2x.png */; };
+		84E767A518767C53000D4664 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E767A318767C53000D4664 /* Default@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		681834081875D7BF0064E154 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 681833E01875D7BE0064E154 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 681833E71875D7BE0064E154;
+			remoteInfo = KToast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		681833E81875D7BE0064E154 /* KToast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KToast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		681833EB1875D7BE0064E154 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		681833ED1875D7BE0064E154 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		681833EF1875D7BE0064E154 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		681833F31875D7BE0064E154 /* KToast-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KToast-Info.plist"; sourceTree = "<group>"; };
+		681833F51875D7BE0064E154 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		681833F71875D7BE0064E154 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		681833F91875D7BE0064E154 /* KToast-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KToast-Prefix.pch"; sourceTree = "<group>"; };
+		681833FD1875D7BE0064E154 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		681834031875D7BE0064E154 /* KToastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KToastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		681834041875D7BE0064E154 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6818340C1875D7BF0064E154 /* KToastTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KToastTests-Info.plist"; sourceTree = "<group>"; };
+		6818340E1875D7BF0064E154 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		681834101875D7BF0064E154 /* KToastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KToastTests.m; sourceTree = "<group>"; };
+		6818341D1875DD280064E154 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		681834291875F60E0064E154 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6818342A1875F60E0064E154 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6818342C1875F60E0064E154 /* KToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KToast.h; sourceTree = "<group>"; };
+		6818342D1875F60E0064E154 /* KToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KToast.m; sourceTree = "<group>"; };
+		6818342F1875F60E0064E154 /* ParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentViewController.h; sourceTree = "<group>"; };
+		681834301875F60E0064E154 /* ParentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentViewController.m; sourceTree = "<group>"; };
+		681834361875F6260064E154 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		84E767A218767C53000D4664 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		84E767A318767C53000D4664 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		681833E51875D7BE0064E154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6818341E1875DD280064E154 /* QuartzCore.framework in Frameworks */,
+				681833EE1875D7BE0064E154 /* CoreGraphics.framework in Frameworks */,
+				681833F01875D7BE0064E154 /* UIKit.framework in Frameworks */,
+				681833EC1875D7BE0064E154 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		681834001875D7BE0064E154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				681834051875D7BE0064E154 /* XCTest.framework in Frameworks */,
+				681834071875D7BF0064E154 /* UIKit.framework in Frameworks */,
+				681834061875D7BE0064E154 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		681833DF1875D7BE0064E154 = {
+			isa = PBXGroup;
+			children = (
+				681833F11875D7BE0064E154 /* KToast */,
+				6818340A1875D7BF0064E154 /* KToastTests */,
+				681833EA1875D7BE0064E154 /* Frameworks */,
+				681833E91875D7BE0064E154 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		681833E91875D7BE0064E154 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				681833E81875D7BE0064E154 /* KToast.app */,
+				681834031875D7BE0064E154 /* KToastTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		681833EA1875D7BE0064E154 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6818341D1875DD280064E154 /* QuartzCore.framework */,
+				681833EB1875D7BE0064E154 /* Foundation.framework */,
+				681833ED1875D7BE0064E154 /* CoreGraphics.framework */,
+				681833EF1875D7BE0064E154 /* UIKit.framework */,
+				681834041875D7BE0064E154 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		681833F11875D7BE0064E154 /* KToast */ = {
+			isa = PBXGroup;
+			children = (
+				681834271875F60E0064E154 /* Classes */,
+				681834341875F6260064E154 /* Assets */,
+				681833FD1875D7BE0064E154 /* Images.xcassets */,
+				681833F21875D7BE0064E154 /* Supporting Files */,
+			);
+			path = KToast;
+			sourceTree = "<group>";
+		};
+		681833F21875D7BE0064E154 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				681833F31875D7BE0064E154 /* KToast-Info.plist */,
+				681833F41875D7BE0064E154 /* InfoPlist.strings */,
+				681833F71875D7BE0064E154 /* main.m */,
+				681833F91875D7BE0064E154 /* KToast-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6818340A1875D7BF0064E154 /* KToastTests */ = {
+			isa = PBXGroup;
+			children = (
+				681834101875D7BF0064E154 /* KToastTests.m */,
+				6818340B1875D7BF0064E154 /* Supporting Files */,
+			);
+			path = KToastTests;
+			sourceTree = "<group>";
+		};
+		6818340B1875D7BF0064E154 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6818340C1875D7BF0064E154 /* KToastTests-Info.plist */,
+				6818340D1875D7BF0064E154 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		681834271875F60E0064E154 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6818342B1875F60E0064E154 /* KToast */,
+				681834281875F60E0064E154 /* AppDelegate */,
+				6818342E1875F60E0064E154 /* ParentViewController */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		681834281875F60E0064E154 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				681834291875F60E0064E154 /* AppDelegate.h */,
+				6818342A1875F60E0064E154 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6818342B1875F60E0064E154 /* KToast */ = {
+			isa = PBXGroup;
+			children = (
+				6818342C1875F60E0064E154 /* KToast.h */,
+				6818342D1875F60E0064E154 /* KToast.m */,
+			);
+			path = KToast;
+			sourceTree = "<group>";
+		};
+		6818342E1875F60E0064E154 /* ParentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6818342F1875F60E0064E154 /* ParentViewController.h */,
+				681834301875F60E0064E154 /* ParentViewController.m */,
+			);
+			path = ParentViewController;
+			sourceTree = "<group>";
+		};
+		681834341875F6260064E154 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				681834351875F6260064E154 /* Images */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		681834351875F6260064E154 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				681834361875F6260064E154 /* Default.png */,
+				84E767A218767C53000D4664 /* Default-568h@2x.png */,
+				84E767A318767C53000D4664 /* Default@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		681833E71875D7BE0064E154 /* KToast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 681834141875D7BF0064E154 /* Build configuration list for PBXNativeTarget "KToast" */;
+			buildPhases = (
+				681833E41875D7BE0064E154 /* Sources */,
+				681833E51875D7BE0064E154 /* Frameworks */,
+				681833E61875D7BE0064E154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KToast;
+			productName = KToast;
+			productReference = 681833E81875D7BE0064E154 /* KToast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		681834021875D7BE0064E154 /* KToastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 681834171875D7BF0064E154 /* Build configuration list for PBXNativeTarget "KToastTests" */;
+			buildPhases = (
+				681833FF1875D7BE0064E154 /* Sources */,
+				681834001875D7BE0064E154 /* Frameworks */,
+				681834011875D7BE0064E154 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				681834091875D7BF0064E154 /* PBXTargetDependency */,
+			);
+			name = KToastTests;
+			productName = KToastTests;
+			productReference = 681834031875D7BE0064E154 /* KToastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		681833E01875D7BE0064E154 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Krupal Ghorpade";
+				TargetAttributes = {
+					681834021875D7BE0064E154 = {
+						TestTargetID = 681833E71875D7BE0064E154;
+					};
+				};
+			};
+			buildConfigurationList = 681833E31875D7BE0064E154 /* Build configuration list for PBXProject "KToast" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 681833DF1875D7BE0064E154;
+			productRefGroup = 681833E91875D7BE0064E154 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				681833E71875D7BE0064E154 /* KToast */,
+				681834021875D7BE0064E154 /* KToastTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		681833E61875D7BE0064E154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				681833F61875D7BE0064E154 /* InfoPlist.strings in Resources */,
+				84E767A418767C53000D4664 /* Default-568h@2x.png in Resources */,
+				84E767A518767C53000D4664 /* Default@2x.png in Resources */,
+				681834371875F6260064E154 /* Default.png in Resources */,
+				681833FE1875D7BE0064E154 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		681834011875D7BE0064E154 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6818340F1875D7BF0064E154 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		681833E41875D7BE0064E154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				681834311875F60E0064E154 /* AppDelegate.m in Sources */,
+				681834321875F60E0064E154 /* KToast.m in Sources */,
+				681834331875F60E0064E154 /* ParentViewController.m in Sources */,
+				681833F81875D7BE0064E154 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		681833FF1875D7BE0064E154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				681834111875D7BF0064E154 /* KToastTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		681834091875D7BF0064E154 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 681833E71875D7BE0064E154 /* KToast */;
+			targetProxy = 681834081875D7BF0064E154 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		681833F41875D7BE0064E154 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				681833F51875D7BE0064E154 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6818340D1875D7BF0064E154 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6818340E1875D7BF0064E154 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		681834121875D7BF0064E154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		681834131875D7BF0064E154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		681834151875D7BF0064E154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KToast/KToast-Prefix.pch";
+				INFOPLIST_FILE = "KToast/KToast-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		681834161875D7BF0064E154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KToast/KToast-Prefix.pch";
+				INFOPLIST_FILE = "KToast/KToast-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		681834181875D7BF0064E154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KToast.app/KToast";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KToast/KToast-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KToastTests/KToastTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		681834191875D7BF0064E154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KToast.app/KToast";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KToast/KToast-Prefix.pch";
+				INFOPLIST_FILE = "KToastTests/KToastTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		681833E31875D7BE0064E154 /* Build configuration list for PBXProject "KToast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				681834121875D7BF0064E154 /* Debug */,
+				681834131875D7BF0064E154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		681834141875D7BF0064E154 /* Build configuration list for PBXNativeTarget "KToast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				681834151875D7BF0064E154 /* Debug */,
+				681834161875D7BF0064E154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		681834171875D7BF0064E154 /* Build configuration list for PBXNativeTarget "KToastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				681834181875D7BF0064E154 /* Debug */,
+				681834191875D7BF0064E154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 681833E01875D7BE0064E154 /* Project object */;
+}

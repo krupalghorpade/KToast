@@ -1,0 +1,21 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+//  Created by Krupal Ghorpade on 02/01/14.
+//  Copyright (c) 2014 Mobisoft Infotech Pvt. Ltd. All rights reserved.
+//  This is an open source software licensed under the terms of MIT License.
+//  Please check http://opensource.org/licenses/MIT
+
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
