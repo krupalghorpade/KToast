@@ -6,6 +6,7 @@ This supports iOS 5 and above.
 
 --------------------------------------------------------------------------------
 This control is licensed under MIT license.
+
 The MIT License (MIT)
 
 Copyright (c) 2014 Krupal Ghorpade
