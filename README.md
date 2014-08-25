@@ -4,6 +4,9 @@ KToast
 It is a simple Android like Toast for iOS.
 This supports iOS 5 and above.
 
+Read More At : http://krupalghorpade.github.io/KToast/
+
+
 --------------------------------------------------------------------------------
 This control is licensed under MIT license.
 
@@ -30,5 +33,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 --------------------------------------------------------------------------------
-
-Read More At : http://krupalghorpade.github.io/KToast/
