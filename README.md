@@ -4,8 +4,6 @@ KToast
 It is a simple Android like Toast for iOS.
 This supports iOS 8 and above with all orientations.
 
-Read More At : http://krupalghorpade.github.io/KToast/
-
 
 --------------------------------------------------------------------------------
 This control is licensed under MIT license.
