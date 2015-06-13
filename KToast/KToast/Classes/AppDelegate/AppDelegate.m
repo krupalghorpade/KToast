@@ -1,9 +1,9 @@
 //
-//  AppDelegate.m
+//  KToast.h
 //  KToast
 //
 //  Created by Krupal Ghorpade on 02/01/14.
-//  Copyright (c) 2014 Mobisoft Infotech Pvt. Ltd. All rights reserved.
+//  Copyright (c) 2014 Krupal Ghorpade. All rights reserved.
 //  This is an open source software licensed under the terms of MIT License.
 //  Please check http://opensource.org/licenses/MIT
 //
@@ -51,15 +51,37 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     
-    parentViewController = [[ParentViewController alloc]init];
+    self.window.rootViewController = self.parentViewController;
     
-    float height = self.window.bounds.size.height;
-        
-    parentViewController.view.frame = CGRectMake(0, 0, 320, height);
-    
-    self.window.rootViewController = parentViewController;
+    self.parentViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.window makeKeyAndVisible];
  
 }
+
+#pragma mark - GETTER
+- (ParentViewController *)parentViewController
+{
+    if (!_parentViewController) {
+        _parentViewController = [[ParentViewController alloc] init];
+    }
+    return _parentViewController;
+}
+@end
+
+
+@interface UIViewController(Orientation)
+
+@end
+@implementation UIViewController (Orientation)
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
 @end

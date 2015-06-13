@@ -1,16 +1,16 @@
 //
-//  ParentViewController.m
+//  KToast.h
 //  KToast
 //
 //  Created by Krupal Ghorpade on 02/01/14.
-//  Copyright (c) 2014 Mobisoft Infotech Pvt. Ltd. All rights reserved.
+//  Copyright (c) 2014 Krupal Ghorpade. All rights reserved.
 //  This is an open source software licensed under the terms of MIT License.
 //  Please check http://opensource.org/licenses/MIT
 //
 
-
 #import "ParentViewController.h"
 #import "KToast.h"
+#import <Foundation/NSURLSession.h>
 
 @interface ParentViewController ()
 {
@@ -46,16 +46,50 @@
 - (void)addBackground
 {
     UIImageView * background = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Default.png"]];
-    background.frame  = CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height);
     background.alpha = 0.8;
     [self.view addSubview:background];
+    background.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:background
+                                                            attribute:NSLayoutAttributeLeft
+                                                            relatedBy:NSLayoutRelationEqual
+                                                               toItem:self.view
+                                                            attribute:NSLayoutAttributeLeft
+                                                           multiplier:1
+                                                             constant:0]];
+    
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:background
+                                                            attribute:NSLayoutAttributeRight
+                                                            relatedBy:NSLayoutRelationEqual
+                                                               toItem:self.view
+                                                            attribute:NSLayoutAttributeRight
+                                                           multiplier:1
+                                                             constant:0]];
+    
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:background
+                                                            attribute:NSLayoutAttributeTop
+                                                            relatedBy:NSLayoutRelationEqual
+                                                               toItem:self.view
+                                                            attribute:NSLayoutAttributeTop
+                                                           multiplier:1
+                                                             constant:0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:background
+                                                            attribute:NSLayoutAttributeBottom
+                                                            relatedBy:NSLayoutRelationEqual
+                                                               toItem:self.view
+                                                            attribute:NSLayoutAttributeBottom
+                                                           multiplier:1
+                                                             constant:0]];
+    
+
 }
 
 - (void)addInfoLabel
 {
-    UILabel * lblTapAnywhere = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 300, 44)];
-    
-    lblTapAnywhere.center = CGPointMake(160, [UIScreen mainScreen].bounds.size.height-66);
+    UILabel * lblTapAnywhere = [[UILabel alloc]init];
     
     lblTapAnywhere.text = @"Tap anywhere to see KToast!";
     
@@ -68,19 +102,53 @@
     lblTapAnywhere.textColor = [UIColor whiteColor];
     
     [self.view addSubview:lblTapAnywhere];
+    
+    lblTapAnywhere.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:lblTapAnywhere
+                                                          attribute:NSLayoutAttributeCenterX
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterX
+                                                         multiplier:1
+                                                           constant:0]];
+    
+    
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:lblTapAnywhere
+                                                          attribute:NSLayoutAttributeCenterY
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeCenterY
+                                                         multiplier:1.5
+                                                           constant:0]];
+
 }
 
 #pragma mark - TOUCH DELEGATES
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
-    UITouch * touch  = [touches anyObject];
-    CGPoint location = [touch locationInView:[touch view]];
+    //UITouch * touch  = [touches anyObject];
+    //CGPoint location = [touch locationInView:[touch view]];
     
-    
+
     //AND THE ONLY THING YOU HAVE TO DO IS
-    kToast =  [[KToast alloc]initWithKToastWithMessage:@"This is KToast! and this looks nice here!" withFontName:@"Helvetica-Bold" withFontSize:14 showAtHeight:location.y];
-     
+    
+    
+    [KToast showWithMessage:@"This is KToast! and this looks nice here!" withFontName:@"Helvetica-Bold" withFontSize:12];
+    
+    //OR
+
+    /*
+    kToast = [[KToast alloc]initWithKToastWithMessage:@"This is KToast! and this looks nice here!"
+                                         withFontName:@""
+                                         withFontSize:10
+                                     withBottomOffset:44];
     [kToast show];
+   */
+
+    
     
 }
 

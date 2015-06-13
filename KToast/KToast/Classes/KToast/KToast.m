@@ -3,7 +3,7 @@
 //  KToast
 //
 //  Created by Krupal Ghorpade on 02/01/14.
-//  Copyright (c) 2014 Mobisoft Infotech Pvt. Ltd. All rights reserved.
+//  Copyright (c) 2014 Krupal Ghorpade. All rights reserved.
 //  This is an open source software licensed under the terms of MIT License.
 //  Please check http://opensource.org/licenses/MIT
 //
@@ -12,7 +12,12 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation KToast
-- (id)initWithKToastWithMessage:(NSString*)message withFontName:(NSString*)fontName withFontSize:(float)size showAtHeight:(float)height
+
++ (void)showWithMessage:(NSString*)message withFontName:(NSString*)fontName withFontSize:(CGFloat)size {
+   KToast* kToast =  [[KToast alloc]initWithKToastWithMessage:message withFontName:fontName withFontSize:size withBottomOffset:44];
+    [kToast show];
+}
+- (id)initWithKToastWithMessage:(NSString*)message withFontName:(NSString*)fontName withFontSize:(CGFloat)size withBottomOffset:(CGFloat)offset
 {
     self = [super init];
     if (self) {
@@ -22,7 +27,7 @@
         
         fontSize = size;
         
-        heightToShow = height;
+        heightToShow = offset;
         
         [self configureMessageLabel];
         
@@ -48,14 +53,19 @@
     
     lblMessage.backgroundColor = [UIColor clearColor];
     
-    lblMessage.frame = CGRectMake(0, 0,[lblMessage sizeThatFits:CGSizeZero].width,[lblMessage sizeThatFits:CGSizeZero].height);
+    lblMessage.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    lblMessage.layer.cornerRadius = 6;
+    
+    lblMessage.lineBreakMode = NSLineBreakByTruncatingTail;
+    
+    lblMessage.numberOfLines = 0;
+    
 }
 
 - (void)configureAndAddBackgroundView
 {
-    backgroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, lblMessage.frame.size.width+20,lblMessage.frame.size.height+20)];
-    
-    backgroundView.center = CGPointMake(160, heightToShow);
+    backgroundView = [[UIView alloc]init];
     
     backgroundView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.65];
     
@@ -76,13 +86,6 @@
 
 - (void)removeKToastFromParent
 {
-    //THIS IS OPTIONAL, BUT I MADE IT.
-    for (UIView *subView in backgroundView.subviews)
-    {
-        [subView removeFromSuperview];
-        //DO NOT CALL subView = nil SINCE subView IS NOT __STRONG
-    }
-    
     [backgroundView removeFromSuperview];
     backgroundView = nil;
     
@@ -91,15 +94,105 @@
 #pragma mark - PUBLIC METHODS
 - (void)show
 {
-    [[[UIApplication sharedApplication].windows objectAtIndex:0] addSubview:backgroundView];
 
+    NSAssert(!([[[UIDevice currentDevice]systemVersion]floatValue]<8.0), @"KToast is only available for iOS8+");
     
-    //ALIGN LABEL AT THE CENTER OF BGVIEW
-    
-    lblMessage.center = CGPointMake(backgroundView.frame.size.width/2, backgroundView.frame.size.height/2);
-    
+    lblMessage.translatesAutoresizingMaskIntoConstraints = NO;
+    backgroundView.translatesAutoresizingMaskIntoConstraints = NO;
     [backgroundView addSubview:lblMessage];
     
+    
+    
+    id instance = [[UIApplication sharedApplication].windows objectAtIndex:0];
+    [instance addSubview:backgroundView];
+
+    
+    NSDictionary *attributes = @{NSFontAttributeName: lblMessage.font};
+
+    UIView * superview = (UIView*)instance;
+    CGRect rect =     [lblMessage.text boundingRectWithSize:CGSizeMake(superview.frame.size.width, MAXFLOAT)
+                                                    options:NSStringDrawingUsesLineFragmentOrigin
+                                                 attributes:attributes
+                                                    context:nil];
+    
+    if (rect.size.height<30) {
+        rect.size.height = 30;
+    }
+    
+    if ((rect.size.width+20)>superview.bounds.size.width) {
+        rect.size.width = superview.bounds.size.width-20;
+    }
+    
+    
+    [instance addConstraint:[NSLayoutConstraint constraintWithItem:instance
+                                                           attribute:NSLayoutAttributeCenterX
+                                                           relatedBy:NSLayoutRelationEqual
+                                                              toItem:backgroundView
+                                                           attribute:NSLayoutAttributeCenterX
+                                                          multiplier:1
+                                                            constant:0]];
+    
+    
+    [instance addConstraint:[NSLayoutConstraint constraintWithItem:instance
+                                                         attribute:NSLayoutAttributeBottom
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:backgroundView
+                                                         attribute:NSLayoutAttributeBottom
+                                                        multiplier:1
+                                                          constant:heightToShow]];
+
+    [backgroundView addConstraint:[NSLayoutConstraint constraintWithItem:backgroundView
+                                                         attribute:NSLayoutAttributeWidth
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:nil
+                                                         attribute:NSLayoutAttributeNotAnAttribute
+                                                        multiplier:1
+                                                          constant:rect.size.width+20]];
+
+    [instance addConstraint:[NSLayoutConstraint constraintWithItem:backgroundView
+                                                         attribute:NSLayoutAttributeHeight
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:nil
+                                                         attribute:NSLayoutAttributeNotAnAttribute
+                                                        multiplier:0.5
+                                                          constant:rect.size.height]];
+    
+    
+    
+    
+    [backgroundView addConstraint:[NSLayoutConstraint constraintWithItem:backgroundView
+                                                         attribute:NSLayoutAttributeLeft
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:lblMessage
+                                                         attribute:NSLayoutAttributeLeft
+                                                        multiplier:1
+                                                          constant:-5]];
+
+    [backgroundView addConstraint:[NSLayoutConstraint constraintWithItem:backgroundView
+                                                         attribute:NSLayoutAttributeRight
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:lblMessage
+                                                         attribute:NSLayoutAttributeRight
+                                                        multiplier:1
+                                                          constant:5]];
+    
+    
+    [backgroundView addConstraint:[NSLayoutConstraint constraintWithItem:backgroundView
+                                                         attribute:NSLayoutAttributeTop
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:lblMessage
+                                                         attribute:NSLayoutAttributeTop
+                                                        multiplier:1
+                                                          constant:0]];
+    
+    [backgroundView addConstraint:[NSLayoutConstraint constraintWithItem:backgroundView
+                                                         attribute:NSLayoutAttributeBottom
+                                                         relatedBy:NSLayoutRelationEqual
+                                                            toItem:lblMessage
+                                                         attribute:NSLayoutAttributeBottom
+                                                        multiplier:1
+                                                          constant:0]];
+
     backgroundView.alpha = 0;
     
     
@@ -111,9 +204,9 @@
      }
                      completion:^(BOOL finish)
      {
-         [self performSelector:@selector(animateAndRemoveKToast) withObject:nil afterDelay:1.5];
+         [self performSelector:@selector(animateAndRemoveKToast) withObject:nil afterDelay:1.0];
      }];
-
+    
 }
 
 @end

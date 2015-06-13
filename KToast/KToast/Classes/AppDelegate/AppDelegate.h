@@ -1,9 +1,9 @@
 //
-//  AppDelegate.h
+//  KToast.h
 //  KToast
 //
 //  Created by Krupal Ghorpade on 02/01/14.
-//  Copyright (c) 2014 Mobisoft Infotech Pvt. Ltd. All rights reserved.
+//  Copyright (c) 2014 Krupal Ghorpade. All rights reserved.
 //  This is an open source software licensed under the terms of MIT License.
 //  Please check http://opensource.org/licenses/MIT
 //
@@ -14,9 +14,7 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-{
-    ParentViewController * parentViewController;
-}
+@property (nonatomic,strong)ParentViewController * parentViewController;
 
 @property (strong, nonatomic) UIWindow *window;
 
